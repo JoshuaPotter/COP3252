@@ -8,6 +8,9 @@ public class Invoice {
     private int quantity;
     private double item_price;
 
+    // default constructor
+    public Invoice() {    }
+
     // constructor
     public Invoice(String part_number, String part_description, int quantity, double item_price) {
         this.part_number = part_number;
