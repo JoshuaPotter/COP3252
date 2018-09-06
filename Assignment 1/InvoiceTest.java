@@ -33,7 +33,7 @@ public class InvoiceTest {
         // dump updated Invoice object values
         System.out.printf("%nInvoice 03 (Set Method Tests)%n");
         System.out.println("-----");
-        dumpInvoice("", invoice03);
+        dumpInvoice("NEW: ", invoice03);
     } 
 
     public static void dumpInvoice(String str, Invoice myInvoice) {
