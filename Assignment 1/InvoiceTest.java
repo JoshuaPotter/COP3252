@@ -6,15 +6,15 @@ public class InvoiceTest {
     public static void main(String args[]) {
         // create Invoice objects using both constructors
         Invoice invoice01 = new Invoice();
-        Invoice invoice02 = new Invoice("0001", "Part #1", 1, 100.00);
-        Invoice invoice03 = new Invoice("0002", "Part #2", -12, -200);
+        Invoice invoice02 = new Invoice("0002", "Part #2", 1, 100.00);
+        Invoice invoice03 = new Invoice("0003", "Part #3", -12, -200);
 
         // dump Invoice object values
         System.out.printf("Invoice 01 (Default Constructor)%n");
         System.out.println("-----");
         dumpInvoice("", invoice01);
 
-        System.out.printf("%nInvoice 02 (Correct Constructor)%n");
+        System.out.printf("%nInvoice 02 (Parameter Constructor)%n");
         System.out.println("-----");
         dumpInvoice("", invoice02);
 
@@ -24,14 +24,14 @@ public class InvoiceTest {
 
         // set new values for Invoice object
         invoice03.setItemPrice(50);
-        invoice03.setPartDescription("Labor");
-        invoice03.setPartNumber("0003");
+        invoice03.setPartDescription("Part #1");
+        invoice03.setPartNumber("0001");
         invoice03.setQuantity(10);
 
         // dump updated Invoice object values
-        System.out.printf("%nInvoice 03 (Set Method Tests)%n");
+        System.out.printf("%nInvoice 01 (Updated)%n");
         System.out.println("-----");
-        dumpInvoice("NEW: ", invoice03);
+        dumpInvoice("UPDATE: ", invoice03);
     } 
 
     public static void dumpInvoice(String str, Invoice myInvoice) {
