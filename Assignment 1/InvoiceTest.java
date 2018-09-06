@@ -2,8 +2,6 @@
 // Assignment 1b (ex. 3.12)
 // InvoiceTest.java
 
-import java.util.Scanner;
-
 public class InvoiceTest {
     public static void main(String args[]) {
         // create Invoice objects using both constructors
