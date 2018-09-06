@@ -22,6 +22,39 @@ public class assignment1a {
 
         input.close();
 
-        System.out.printf("First: %d%nSecond: %d%nThird: %d%n", firstNum, secondNum, thirdNum);
+        // System.out.printf("First: %d%nSecond: %d%nThird: %d%n", firstNum, secondNum, thirdNum);
+        System.out.printf("Sum: %d%n", (firstNum + secondNum + thirdNum));
+        System.out.printf("Average: %d%n", (firstNum + secondNum + thirdNum)/3);
+        System.out.printf("Product: %d%n", (firstNum * secondNum * thirdNum));
+
+        // find smallest
+        if(firstNum <= secondNum) {
+            if(firstNum <= thirdNum) {
+                System.out.printf("Smallest value: %d%n", firstNum);
+            } else {
+                System.out.printf("Smallest value: %d%n", thirdNum);
+            }
+        } else {
+            if(secondNum <= thirdNum) {
+                System.out.printf("Smallest value: %d%n", secondNum);
+            } else {
+                System.out.printf("Smallest value: %d%n", thirdNum);
+            }
+        }
+
+        // find largest
+        if(firstNum >= secondNum) {
+            if(firstNum >= thirdNum) {
+                System.out.printf("Largest value: %d%n", firstNum);
+            } else {
+                System.out.printf("Largest value: %d%n", thirdNum);
+            }
+        } else {
+            if(secondNum >= thirdNum) {
+                System.out.printf("Largest value: %d%n", secondNum);
+            } else {
+                System.out.printf("Largest value: %d%n", thirdNum);
+            }
+        }
     } // end main method
 } // end class assignment1a
