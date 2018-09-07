@@ -37,6 +37,8 @@ public class AccountTest {
         displayAccount(account1);
         displayAccount(account2);
         System.out.println();
+
+        input.close();
     }
 
     public static void displayAccount(Account accountToDisplay) {
