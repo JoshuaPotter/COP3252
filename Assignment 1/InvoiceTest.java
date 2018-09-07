@@ -1,6 +1,6 @@
 // Joshua Potter, jop13
 // Assignment 1b (ex. 3.12)
-// InvoiceTest.java
+// InvoiceTest.java (driver for Invoice.java class)
 
 public class InvoiceTest {
     public static void main(String args[]) {
