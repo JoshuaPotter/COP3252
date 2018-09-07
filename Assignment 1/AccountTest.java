@@ -9,10 +9,9 @@ public class AccountTest {
         Account account2 = new Account("John Blue", -7.53);
 
         // display initial balance of each object
-        System.out.printf("%s balance: $%.2f%n",
-            account1.getName(), account1.getBalance());
-        System.out.printf("%s balance: $%.2f%n%n",
-            account2.getName(), account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
+        System.out.println();
 
         // create a Scanner to obtain input from the command window
         Scanner input = new Scanner(System.in);
@@ -24,10 +23,9 @@ public class AccountTest {
         account1.deposit(depositAmount); // add to account1’s balance
 
         // display balances
-        System.out.printf("%s balance: $%.2f%n",
-            account1.getName(), account1.getBalance());
-        System.out.printf("%s balance: $%.2f%n%n",
-            account2.getName(), account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
+        System.out.println();
 
         System.out.print("Enter deposit amount for account2: "); // prompt
         depositAmount = input.nextDouble(); // obtain user input
@@ -36,13 +34,13 @@ public class AccountTest {
         account2.deposit(depositAmount); // add to account2 balance
 
         // display balances
-        System.out.printf("%s balance: $%.2f%n",
-            account1.getName(), account1.getBalance());
-        System.out.printf("%s balance: $%.2f%n%n",
-            account2.getName(), account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
+        System.out.println();
     }
 
     public static void displayAccount(Account accountToDisplay) {
         // display name and balance
+        System.out.printf("%s balance: $%.2f%n", accountToDisplay.getName(), accountToDisplay.getBalance());
     }
 }
