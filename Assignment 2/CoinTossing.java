@@ -27,34 +27,28 @@ public class CoinTossing {
             System.out.println("   2. Exit");
             System.out.print("Select an option: ");
 
-            // Get menu option
-            if(input.hasNext()) {
-                // Get input
-                menu = input.nextLine();
-                System.out.println();
+            // Get input
+            menu = input.nextLine();
+            System.out.println();
 
-                // Check if menu selection is valid
-                if(menu.toLowerCase().equals("toss coin") || menu.toLowerCase().charAt(0) == '1') {
-                    // Toss a coin by calling flip() method and increment score
-                    side = flip();
-                    switch(side) {
-                        case HEADS: heads++;
-                            System.out.printf("Tossing a coin... Heads!%n%n");
-                            break;
-                        case TAILS: tails++;
-                            System.out.printf("Tossing a coin... Tails!%n%n");
-                            break;
-                    }
-                } else if (menu.toLowerCase().equals("exit") || menu.toLowerCase().charAt(0) == '2') {
-                    // Exit code
-                    System.out.println("Exiting...");
-                    running = false;
-                } else {
-                    System.out.printf("Invalid input.%n%n");
+            // Check if menu selection is valid
+            if(menu.toLowerCase().equals("toss coin") || menu.toLowerCase().charAt(0) == '1') {
+                // Toss a coin by calling flip() method and increment score
+                side = flip();
+                switch(side) {
+                    case HEADS: heads++;
+                        System.out.printf("Tossing a coin... Heads!%n%n");
+                        break;
+                    case TAILS: tails++;
+                        System.out.printf("Tossing a coin... Tails!%n%n");
+                        break;
                 }
+            } else if (menu.toLowerCase().equals("exit") || menu.toLowerCase().charAt(0) == '2') {
+                // Exit code
+                System.out.println("Exiting...");
+                running = false;
             } else {
-                System.out.printf("Invalid input.%n%n");
-                input.next();
+                System.out.printf("%s is not a menu option.%n%n", menu);
             }
         } while(running == true);
 
