@@ -22,9 +22,9 @@ public class CoinTossing {
             System.out.printf("Tails: %d%n%n", tails);
 
             // Show menu
-            System.out.println("Menu:");
-            System.out.println("   T - Toss Coin");
-            System.out.println("   E - Exit");
+            System.out.println("Menu (number or string):");
+            System.out.println("   1. Toss Coin");
+            System.out.println("   2. Exit");
             System.out.print("Select an option: ");
 
             // Get menu option
@@ -34,17 +34,18 @@ public class CoinTossing {
                 System.out.println();
 
                 // Check if menu selection is valid
-                if(menu.toLowerCase().charAt(0) == 't' || menu.toLowerCase() == "toss coin") {
+                if(menu.toLowerCase().equals("toss coin") || menu.toLowerCase().charAt(0) == '1') {
                     // Toss a coin by calling flip() method and increment score
-                    System.out.printf("Tossing a coin...%n%n");
                     side = flip();
                     switch(side) {
                         case HEADS: heads++;
+                            System.out.printf("Tossing a coin... Heads!%n%n");
                             break;
                         case TAILS: tails++;
+                            System.out.printf("Tossing a coin... Tails!%n%n");
                             break;
                     }
-                } else if (menu.toLowerCase().charAt(0) == 'e' || menu.toLowerCase() == "exit") {
+                } else if (menu.toLowerCase().equals("exit") || menu.toLowerCase().charAt(0) == '2') {
                     // Exit code
                     System.out.println("Exiting...");
                     running = false;
