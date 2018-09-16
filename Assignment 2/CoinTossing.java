@@ -6,7 +6,7 @@ import java.security.SecureRandom; // random numbers
 
 public class CoinTossing {
     private static final SecureRandom randomNumbers = new SecureRandom();
-    private static int heads, tails = 0;
+    private int heads, tails = 0;
     private static enum Coin { HEADS, TAILS };
 
     public static void main(String[] args) {
@@ -44,7 +44,7 @@ public class CoinTossing {
                         break;
                 }
             } else if (menu.toLowerCase().equals("exit") || menu.toLowerCase().charAt(0) == '2') {
-                // Exit code
+                // Exit code satisfied
                 System.out.println("Exiting...");
                 running = false;
             } else {
