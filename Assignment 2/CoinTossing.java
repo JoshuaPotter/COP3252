@@ -30,11 +30,11 @@ public class CoinTossing {
             // Get menu option
             if(input.hasNext()) {
                 // Get input
-                menu = input.next();
+                menu = input.nextLine();
                 System.out.println();
 
                 // Check if menu selection is valid
-                if(menu.toLowerCase().charAt(0) == 't' || menu.toLowerCase() == "toss coin" ) {
+                if(menu.toLowerCase().charAt(0) == 't' || menu.toLowerCase() == "toss coin") {
                     // Toss a coin by calling flip() method and increment score
                     System.out.printf("Tossing a coin...%n%n");
                     side = flip();
