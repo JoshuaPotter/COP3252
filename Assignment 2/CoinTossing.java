@@ -22,10 +22,10 @@ public class CoinTossing {
             System.out.printf("Tails: %d%n%n", tails);
 
             // Show menu
-            System.out.println("Menu (number or string):");
+            System.out.println("Menu");
             System.out.println("   1. Toss Coin");
             System.out.println("   2. Exit");
-            System.out.print("Select an option: ");
+            System.out.print("Select an option (number or string): ");
 
             // Get input
             menu = input.nextLine();
