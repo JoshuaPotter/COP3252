@@ -8,8 +8,10 @@ public class RoundingNumbers {
         boolean running = true;
         Scanner input = new Scanner(System.in);
         System.out.println("Round a double to the nearest integer. ");
+        // loop gets double and round it until user types "exit"
         do {
             System.out.print("Enter a double (or 'exit' to quit): ");
+            // determines if input is valid, invalid, or exit code
             if(input.hasNextDouble()) {
                 double d = input.nextDouble();
                 System.out.printf("Original: %f%n", d);
