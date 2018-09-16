@@ -12,7 +12,7 @@ public class RoundingNumbers {
             System.out.print("Enter a double (or 'exit' to quit): ");
             if(input.hasNextDouble()) {
                 double d = input.nextDouble();
-                System.out.printf("Original: %g%n", d);
+                System.out.printf("Original: %f%n", d);
                 System.out.printf("Rounded: %.0f%n", Math.floor(d + 0.5));
             } else if (input.hasNext("exit")) {
                 running = false;
