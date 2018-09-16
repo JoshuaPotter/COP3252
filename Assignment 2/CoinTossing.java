@@ -5,11 +5,9 @@ import java.util.Scanner; // gather user input
 import java.security.SecureRandom; // random numbers
 
 public class CoinTossing {
-    // create secure random number generator
     private static final SecureRandom randomNumbers = new SecureRandom();
     private static int heads, tails = 0;
-    private static enum Coin { HEADS, TAILS };  
-        Scanner input = new Scanner(System.in);
+    private static enum Coin { HEADS, TAILS };
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -19,16 +17,25 @@ public class CoinTossing {
 
         System.out.printf("Toss a coin, try your luck.%n%n");
         do {
+            // Show score
             System.out.printf("Heads: %d%n", heads);
             System.out.printf("Tails: %d%n%n", tails);
+
+            // Show menu
             System.out.println("Menu:");
             System.out.println("   T - Toss Coin");
             System.out.println("   E - Exit");
             System.out.print("Select an option: ");
+
+            // Get menu option
             if(input.hasNext()) {
+                // Get input
                 menu = input.next();
                 System.out.println();
+
+                // Check if menu selection is valid
                 if(menu.toLowerCase().charAt(0) == 't' || menu.toLowerCase() == "toss coin" ) {
+                    // Toss a coin by calling flip() method and increment score
                     System.out.printf("Tossing a coin...%n%n");
                     side = flip();
                     switch(side) {
@@ -38,6 +45,7 @@ public class CoinTossing {
                             break;
                     }
                 } else if (menu.toLowerCase().charAt(0) == 'e' || menu.toLowerCase() == "exit") {
+                    // Exit code
                     System.out.println("Exiting...");
                     running = false;
                 } else {
@@ -53,6 +61,8 @@ public class CoinTossing {
     }
     
     public static Coin flip() {
+        // Get binary number and return enum
+        // 0 is heads, 1 is tails
         if(randomNumbers.nextInt(2) == 0) {
             return Coin.HEADS;
         } else {
