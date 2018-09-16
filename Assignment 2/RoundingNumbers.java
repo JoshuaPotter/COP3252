@@ -4,7 +4,7 @@
 import java.util.Scanner; // gather user input
 
 public class RoundingNumbers {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         boolean running = true;
         Scanner input = new Scanner(System.in);
         System.out.println("Round a double to the nearest integer. ");
