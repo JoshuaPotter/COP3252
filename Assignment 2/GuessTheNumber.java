@@ -15,10 +15,13 @@ public class GuessTheNumber {
         char playAgain;
 
         System.out.printf("CPU is picking random number between 1 and 1000. ");
+        // Play again loop
         do {
             running = true;
             guessed = false;
             System.out.printf("Guess the number (0 to exit): ");
+
+            // Guess checker loop
             do {
                 guess = input.nextInt();
                 
