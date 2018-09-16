@@ -2,8 +2,11 @@
 // Ex. 6.29: CoinTossing.java, Deitel
 
 import java.util.Scanner; // gather user input
+import java.security.SecureRandom; // random numbers
 
 public class CoinTossing {
+    // create secure random number generator
+    private static final SecureRandom randomNumbers = new SecureRandom();
     private static int heads, tails = 0;
     private static enum Coin { HEADS, TAILS };  
         Scanner input = new Scanner(System.in);
@@ -23,18 +26,18 @@ public class CoinTossing {
             System.out.println("   E - (E)xit");
             System.out.print("Select an option: ");
             if(input.hasNext()) {
-                menu = input.next(".").charAt(0);
+                menu = input.next().charAt(0);
                 System.out.println();
-                if(menu == 'T') {
+                if(menu == 'T' || menu == 't') {
                     System.out.printf("Tossing a coin...%n%n");
-                    // side = flip();
-                    // switch(side) {
-                    //     case HEADS: heads++;
-                    //         break;
-                    //     case TAILS: tails++;
-                    //         break;
-                    // }
-                } else if (menu == 'E') {
+                    side = flip();
+                    switch(side) {
+                        case HEADS: heads++;
+                            break;
+                        case TAILS: tails++;
+                            break;
+                    }
+                } else if (menu == 'E' || menu == 'e') {
                     System.out.println("Exiting...");
                     running = false;
                 } else {
@@ -45,10 +48,15 @@ public class CoinTossing {
                 input.next();
             }
         } while(running == true);
+
+        input.close();
     }
     
-    // public static Enum flip() {
-
-    //     return side;
-    // }
+    public static Coin flip() {
+        if(randomNumbers.nextInt(2) == 0) {
+            return Coin.HEADS;
+        } else {
+            return Coin.TAILS;
+        }
+    }
 }
