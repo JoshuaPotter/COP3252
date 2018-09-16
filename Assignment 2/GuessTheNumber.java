@@ -9,8 +9,7 @@ public class GuessTheNumber {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        boolean running = true;
-        boolean guessed = false;
+        boolean running, guessed;
         int rand = randomNumber.nextInt(999) + 1;
         int guess;
         char playAgain;
@@ -28,7 +27,7 @@ public class GuessTheNumber {
                     System.out.println("Congratulations. You guessed the number!");
                     guessed = true;
 
-                    // Prompt
+                    // Prompt to re-run program
                     System.out.printf("Would you like play again? (y/n): ");
                     playAgain = input.next().toLowerCase().charAt(0);
                     if(playAgain == 'n') {
