@@ -6,7 +6,7 @@ import java.security.SecureRandom; // random numbers
 
 public class CoinTossing {
     private static final SecureRandom randomNumbers = new SecureRandom();
-    private int heads, tails = 0;
+    private static int heads, tails = 0;
     private static enum Coin { HEADS, TAILS };
 
     public static void main(String[] args) {
