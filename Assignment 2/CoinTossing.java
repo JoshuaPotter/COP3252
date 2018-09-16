@@ -15,20 +15,20 @@ public class CoinTossing {
         Scanner input = new Scanner(System.in);
         boolean running = true;
         Coin side;
-        char menu;
+        String menu;
 
         System.out.printf("Toss a coin, try your luck.%n%n");
         do {
             System.out.printf("Heads: %d%n", heads);
             System.out.printf("Tails: %d%n%n", tails);
             System.out.println("Menu:");
-            System.out.println("   T - (T)oss a coin");
-            System.out.println("   E - (E)xit");
+            System.out.println("   T - Toss Coin");
+            System.out.println("   E - Exit");
             System.out.print("Select an option: ");
             if(input.hasNext()) {
-                menu = input.next().charAt(0);
+                menu = input.next();
                 System.out.println();
-                if(menu == 'T' || menu == 't') {
+                if(menu.toLowerCase().charAt(0) == 't' || menu.toLowerCase() == "toss coin" ) {
                     System.out.printf("Tossing a coin...%n%n");
                     side = flip();
                     switch(side) {
@@ -37,7 +37,7 @@ public class CoinTossing {
                         case TAILS: tails++;
                             break;
                     }
-                } else if (menu == 'E' || menu == 'e') {
+                } else if (menu.toLowerCase().charAt(0) == 'e' || menu.toLowerCase() == "exit") {
                     System.out.println("Exiting...");
                     running = false;
                 } else {
