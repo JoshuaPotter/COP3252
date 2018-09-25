@@ -13,16 +13,17 @@ public class TwoDimensionalArray {
             if(col < array.length-1) {
                 for(int row = 0; row < array[0].length; row++) {
                     if(row < array[0].length-1) {
-                        // add random number (0-9) to cell
+                        // add random number (0-9) to free cell
                         array[col][row] = randomNumbers.nextInt(10);
                     }
                 }
             } else {
+                // add value 0 to position (6,4)
                 array[array.length-1][array[0].length-1] = 0;
             }
         }
 
-        // sum columns
+        // sum columns and put values in last row of columns
         for(int col = 0; col < array.length; col++) {
             if(col < array.length-1) {
                 for(int row = 0; row < array[0].length; row++) {
@@ -33,7 +34,7 @@ public class TwoDimensionalArray {
             }
         }
 
-        // sum rows
+        // sum rows and put values in last column of rows
         for(int row = 0; row < array[0].length; row++) {
             if(row < array[0].length-1) {
                 for(int col = 0; col < array.length; col++) {
@@ -47,7 +48,7 @@ public class TwoDimensionalArray {
         // print table
         for(int row = 0; row < array[0].length; row++) {
             for(int col = 0; col < array.length; col++) {
-                System.out.printf("%-2d ", array[col][row]);
+                System.out.printf("%-4d ", array[col][row]);
                 if(col == array.length-1) {
                     System.out.println();
                 }

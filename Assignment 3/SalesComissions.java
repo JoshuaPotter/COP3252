@@ -3,11 +3,12 @@
 
 public class SalesComissions {
     public static void main(String[] args) {
-        int basePay = 200;              // in USD $
-        double comissionRate = 0.09;     // percentage
-        int[] payCounter = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        int[] salesArray = { 5000, 7000, 5500, 10500, 2000, 4000, 4500, 8000, 11000, 6000 };
+        int basePay = 200;                                  // in USD $
+        double comissionRate = 0.09;                        // percentage
+        int[] payCounter = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };   // salary bar chart counter
+        int[] salesArray = { 5000, 7000, 5500, 10500, 2000, 4000, 4500, 8000, 11000, 6000 };    // dummy data
         
+        // for each sale, calculate salary and place it corresponding position in payCounter
         for(int sale : salesArray) {
             int calculatedPay = calculatePay(sale, basePay, comissionRate);
             int index = returnIndex(calculatedPay);
@@ -16,6 +17,7 @@ public class SalesComissions {
             }
         }
 
+        // print salary brackets and corresponding bar chart with stars
         for(int i = 2; i < (payCounter.length + 2); i++) {
             if(i == 10) {
                 System.out.printf("$%d or more: ", 1000);
@@ -32,11 +34,13 @@ public class SalesComissions {
     }
 
     public static int calculatePay(int sale, int basePay, double comissionRate) {
+        // calculates pay based on sales and returns rounded integer
         double pay = basePay + (sale * comissionRate);
         return (int)Math.floor(pay + 0.5);
     }
 
     public static int returnIndex(int pay) {
+        // returns array index position for corresponding salary
         int index;
         if(pay >= 200 && pay <= 299) {
             index = 0;
