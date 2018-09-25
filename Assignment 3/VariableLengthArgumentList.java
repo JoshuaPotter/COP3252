@@ -10,6 +10,7 @@ public class VariableLengthArgumentList {
         int i4 = 40;
         int i5 = 50;
 
+        // print method calls
         System.out.printf("i0 = %d%ni1 = %d%ni2 = %d%ni3 = %d%ni4 = %d%ni5 = %d%n", i0, i1, i2, i3, i4, i5);
         System.out.printf("Product of i1 and i2 is %d%n", product(i1, i2));
         System.out.printf("Product of i2 and i3 is %d%n", product(i2, i3));
