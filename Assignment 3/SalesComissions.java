@@ -1,5 +1,5 @@
 // Joshua Potter, jop13
-// Fig. 7.10: SalesComissions.java, Deitel
+// Ex. 7.10: SalesComissions.java, Deitel
 
 public class SalesComissions {
     public static void main(String[] args) {

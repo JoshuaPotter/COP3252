@@ -1,5 +1,5 @@
 // Joshua Potter, jop13
-//  VariableLengthArgumentList.java, Deitel
+//  Ex. 7.14 VariableLengthArgumentList.java, Deitel
 
 public class VariableLengthArgumentList {
     public static void main(String[] args) {
