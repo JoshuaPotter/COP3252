@@ -37,7 +37,7 @@ public class GuessTheNumber {
                         // Exit code
                         running = false;
                     } else {
-                        // generate new number and re-run program
+                        // Generate new number and re-run program
                         rand = randomNumber.nextInt(999) + 1;
                         System.out.printf("CPU is picking random number between 1 and 1000. ");
                     }
