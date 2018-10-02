@@ -150,18 +150,30 @@ public class Time2 {
 
    // increment minutes
    public void incrementMinute() {
-      // increment 60 seconds ahead
-      for(int i = 0; i < 60; i++) {
-         tick();
+      if(this.minute == 59) {
+         this.minute = 0;
+
+         if(this.hour == 23) {
+            this.hour = 0;
+            this.minute = 0;
+            this.second = 0;
+         } else {
+            this.hour++;
+         }
+      } else {
+         this.minute++;
       }
    }
 
    // increment minutes
    public void incrementHour() {
-      // increment 3600 seconds ahead
-      for(int i = 0; i < 3600; i++) {
-         tick();
-      }
+      if(this.hour == 23) {
+         this.hour = 0;
+         this.minute = 0;
+         this.second = 0;
+      } else {
+         this.hour++;
+      }}
    }
 }
 
