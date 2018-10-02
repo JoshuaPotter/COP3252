@@ -1,0 +1,18 @@
+Constructed with:
+t1: all default arguments
+   00:00:00
+   12:00:00 AM
+t2: hour specified; default minute and second
+   02:00:00
+   2:00:00 AM
+t3: hour and minute specified; default second
+   21:34:00
+   9:34:00 PM
+t4: hour, minute and second specified
+   12:25:42
+   12:25:42 PM
+t5: Time2 object t4 specified
+   12:25:42
+   12:25:42 PM
+
+Exception while initializing t6: hour must be 0-23
