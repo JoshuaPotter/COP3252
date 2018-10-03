@@ -1,4 +1,5 @@
 // Joshua Potter, jop13
+// Ex. 8.7
 // Fig. 8.5: Time2.java
 // Time2 class declaration with overloaded constructors.  
 
@@ -125,55 +126,35 @@ public class Time2 {
 
    // increment seconds
    public void tick() {
-      // ensure seconds and minutes dont exceed 59
-      //    and increment other values correctly if
-      //    there is overflow
-      if(this.second == 59) {
-         this.second = 0;
-
-         if(this.minute == 59) {
-            this.minute = 0;
-
-            if(this.hour == 23) {
-               this.hour = 0;
-               this.minute = 0;
-               this.second = 0;
-            } else {
-               this.hour++;
-            }
-         } else {
-            this.minute++;
-         }
-      } else {
-         this.second++;
-      }
+       // ensure seconds and minutes dont exceed 59
+       // and increment other values correctly if
+       // there is overflow
+       if (this.second == 59) {
+           this.second = 0;
+           incrementMinute();
+       } else {
+           this.second++;
+       }
    }
 
    // increment minutes
    public void incrementMinute() {
-      if(this.minute == 59) {
-         this.minute = 0;
-
-         if(this.hour == 23) {
-            this.hour = 0;
-            this.minute = 0;
-            this.second = 0;
-         } else {
-            this.hour++;
-         }
-      } else {
-         this.minute++;
-      }
+       if (this.minute == 59) {
+           this.minute = 0;
+           incrementHour();
+       } else {
+           this.minute++;
+       }
    }
 
    // increment minutes
    public void incrementHour() {
-      if(this.hour == 23) {
-         this.hour = 0;
-         this.minute = 0;
-         this.second = 0;
-      } else {
-         this.hour++;
-      }
+       if (this.hour == 23) {
+           this.hour = 0;
+           this.minute = 0;
+           this.second = 0;
+       } else {
+           this.hour++;
+       }
    }
 }

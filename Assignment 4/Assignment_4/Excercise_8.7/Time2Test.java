@@ -1,3 +1,5 @@
+// Joshua Potter, jop13
+// Ex. 8.7
 // Fig. 8.6: Time2Test.java
 // Overloaded constructors used to initialize Time2 objects.
 

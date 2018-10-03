@@ -1,4 +1,5 @@
 // Joshua Potter, jop13
+// Ex. 8.5
 // Fig. 8.5: Time2.java
 // Time2 class declaration with overloaded constructors.  
 
