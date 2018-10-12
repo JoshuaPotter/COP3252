@@ -84,7 +84,7 @@ public class BasePlusCommissionEmployee extends Employee {
    public String toString() {
       return String.format(
          "%s %s%s: %.2f%n%s: %.2f%n%s: %.2f", 
-         "base-salaried comission",
+         "base-salaried commission",
          super.toString(),
          "gross sales", grossSales, "commission rate", commissionRate, 
          "base salary", baseSalary);

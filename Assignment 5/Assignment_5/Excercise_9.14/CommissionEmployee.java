@@ -63,7 +63,7 @@ public class CommissionEmployee extends Employee {
    @Override // indicates that this method overrides a superclass method
    public String toString() {                                  
       return String.format("%s %s%s: %.2f%n%s: %.2f",   
-         "comission",
+         "commission",
          super.toString(),  
          "gross sales", grossSales,                                     
          "commission rate", commissionRate);                            
