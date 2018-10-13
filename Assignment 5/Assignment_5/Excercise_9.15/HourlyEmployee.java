@@ -52,13 +52,19 @@ public class HourlyEmployee extends Employee {
       this.wages = wages;
    }
 
+   // calculate earnings
    public double earnings() {
       return wages * hours;
    }
 
+   // return String representation of BasePlusCommissionEmployee
    @Override
    public String toString() {
-      
+      return String.format(
+         "%s %s%s: %.2f%n%s: %.2f%n%s: %.2f", 
+         "hourly",
+         super.toString(),
+         "wages", wages, "hours", hours, 
+         "earnings", earnings());
    }
-
 }
