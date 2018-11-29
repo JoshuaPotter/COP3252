@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transactionRecords>
+    <transactionrecord>
+        <accountNumber>100</accountNumber>
+        <transactions>50.0</transactions>
+    </transactionrecord>
+    <transactionrecord>
+        <accountNumber>250</accountNumber>
+        <transactions>100.0</transactions>
+    </transactionrecord>
+    <transactionrecord>
+        <accountNumber>400</accountNumber>
+        <transactions>42.16</transactions>
+    </transactionrecord>
+</transactionRecords>
