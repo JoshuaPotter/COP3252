@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ReadFile",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "ReadFile",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TwoDimensionalArray",
             "request": "launch",
             "cwd": "${workspaceFolder}",
