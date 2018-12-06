@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 // CreateFile.java
 // Writing data to a sequential text file with class Formatter.
 import java.io.FileNotFoundException;     

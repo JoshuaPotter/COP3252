@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 // FileMatch.java
 import java.io.IOException;
 import java.lang.IllegalStateException;

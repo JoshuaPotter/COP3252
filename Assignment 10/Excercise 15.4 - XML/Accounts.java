@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 // Fig. 15.10: Accounts.java
 // Maintains a List<Account>
 import java.util.ArrayList;

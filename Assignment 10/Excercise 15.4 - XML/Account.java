@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 // Fig. 15.9: Account.java
 // Account class for storing records as objects.
 public class Account {

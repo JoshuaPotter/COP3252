@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 public class TransactionRecord {
    private int account_number;
    private double transactions;

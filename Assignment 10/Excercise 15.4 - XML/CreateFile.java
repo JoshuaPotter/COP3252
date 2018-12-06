@@ -1,3 +1,4 @@
+// Joshua Potter, jop13 
 // CreateFile.java
 // Writing data to a sequential text file 
 import java.io.IOException;
